@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="homepage.css" type="text/css">
+
+</head>
+<body>
+   
+<ul>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="#profile">Profile</a></li>
+  <li id="log"><a href="#Login">Login</a></li>
+  <li id="log"><a href="shoppingCart.html"><img src="cartnew1.jpg" height="45" width="50"></li></a>
+
+  <li id="search"><input type="text" placeholder="Search for Products"></li>
+</ul>
+
+<!-- <div id="menu">
+    <ul>
+      <li>Home</li>
+      <li>What's New</li>
+      <li>Contact Us</li>
+      <li>About Us</li>
+  
+    </ul>
+  </div> -->
+
+<!-- <div id="Body">
+  <div id="menu-icon">
+    <span class="material-icons w3-jumbo">MENU</span>  
+  </div>
+<br><ul>
+    <li><a href="#Clothes">Clothes</a></li>
+    <li><a href="#Watches">Watches</a></li>
+    <li><a href="#Shoes">Shoes</a></li>
+    <li><a href="#Mobile">Mobiles</a></li>
+    
+  </ul> -->
+
+  <br>
+
+<!--Images for slider-->
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="a.jpg" style="width:100%">
+  <img class="mySlides" src="b.jpg" style="width:100%">
+  <img class="mySlides" src="c.jpg" style="width:100%">
+
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+<br>
+
+<div>
+  <a href="products.lti?cat=shoes" ><img src="shoes1.jpg" style="width:24.5%"></a>
+  <a href="products.lti?cat=clothing"><img src="clothes1.png" style="width:20.5%"></a>
+  <a href="products.lti?cat=watch"><img src="watch2.jpg" style="width:24.5%"></a>
+  <a href="products.lti?cat=mobile"><img src="mobile1.jpg" style="width:24.5%"></a>
+</div>
+
+
+
+
+<br>
+<br>
+<br>
+
+
+<footer>All Rights Reserved by  ©RS3</footer>
+</body>
+</html>
+
