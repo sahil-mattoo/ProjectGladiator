@@ -28,6 +28,12 @@ public class GenericDao {
 	}
 	
 	@Transactional
+	public void remove(Object object)
+	{
+		entityManager.remove(object);
+	}
+	
+	@Transactional
 	public Object fetchById(Class clazz, Object pk)
 	{
 		return entityManager.find(clazz, pk);

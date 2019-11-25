@@ -27,9 +27,6 @@ public class Orders {
 	@Column(name="STATUS")
 	private String status;
 	
-	@Column(name="ITEM_QUANTITY")
-	private String itemQuantity;
-	
 	@ManyToOne
 	@JoinColumn(name="CUSTOMER_ID")
     private Customer customer;
@@ -61,14 +58,6 @@ public class Orders {
 		this.status = status;
 	}
 
-	public String getItemQuantity() {
-		return itemQuantity;
-	}
-
-	public void setItemQuantity(String itemQuantity) {
-		this.itemQuantity = itemQuantity;
-	}
-
 	public Customer getCustomer() {
 		return customer;
 	}
@@ -84,6 +73,13 @@ public class Orders {
 	public void setOrderItems(List<OrderItems> orderItems) {
 		this.orderItems = orderItems;
 	}
+
+	@Override
+	public String toString() {
+		return "Orders [orderId=" + orderId + ", orderDate=" + orderDate + ", status=" + status + ", customer="
+				+ customer + ", orderItems=" + orderItems + "]";
+	}
+
 	
 
 }
