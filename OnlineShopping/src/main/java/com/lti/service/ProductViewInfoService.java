@@ -6,16 +6,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.lti.entity.Product;
-import com.lti.repository.DisplayProduct;
+import com.lti.repository.ProductViewInfoRepository;
 
 //@Service("productFetchService")
 @Service
-public class ProductFetchService {
+public class ProductViewInfoService {
 	@Autowired
-	private DisplayProduct display;
+	private ProductViewInfoRepository display;
 	
-	public List<Product> productDisplayOnProductPage(){
+	public Product productDisplayOnProductPage(int productId){
 
-		return display.productDisplayOnProductPage();
+		return display.productDisplayOnProductPage(productId);
 	}
 }

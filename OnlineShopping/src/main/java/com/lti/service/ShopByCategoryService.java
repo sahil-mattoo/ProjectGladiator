@@ -17,6 +17,7 @@ public class ShopByCategoryService {
 	public List<Product> shopByCategory(String category){
 		
 		List<Product> p= shopByCategory.fetchProductByCategory(category);
+		System.out.println("service "+p.size());
 		return p;
 	}
 

@@ -8,11 +8,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<c:forEach items="${ products }" var="p">
-${ p.productName } 
-${ p.productPrice } <br />
-${ p.brand } <br />
-${ p.productDescription } <br />
-</c:forEach>
+
+${ product.getProductName() } 
+${ product.getProductPrice() } <br />
+${ product.getBrand() } <br />
+${ product.getProductDescription() } <br />
+<a href="addToCart.lti?pid=${ product.productId }">Add to Cart</a>
+
 </body>
 </html>

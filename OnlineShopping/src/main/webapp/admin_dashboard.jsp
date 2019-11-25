@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>
-        Admin Successfully logged in!
+       Hello ${ sessionScope.admin.adminUsername } Admin Successfully logged in!
     </h1>
 </body>
 </html>

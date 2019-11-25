@@ -24,9 +24,14 @@ public class GenericDao {
 	@Transactional
 	public void add(Object object)
 	{
-		entityManager.merge(object);
+		entityManager.persist(object);
 	}
 	
+	@Transactional
+	public void remove(Object object)
+	{
+		entityManager.remove(object);
+	}
 	@Transactional
 	public Object fetchById(Class clazz, Object pk)
 	{

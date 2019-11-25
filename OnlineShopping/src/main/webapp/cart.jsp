@@ -23,17 +23,23 @@
 <!--Images for slider-->
 <div>
      <table> 
-     <c:forEach items="${ shopProduct }"  var="p">
+     <c:forEach items="${ products }"  var="p">
      
       <tr>
       	
       	<td> ${ p.getProductName() } </td>
         <td>${ p.getProductPrice() } </td>
         <td>${ p.getCategory() } </td>
-        <td><a href="viewProductInfo.lti?pid=${ p.productId }">View Product</a>
+        <td><a href="removeFromCart.lti?pid=${ p.productId }">Remove from Cart</a>
+        <td> </td>
       
     </tr>
    </c:forEach>
+   <tr>
+<td>	Total Bill=${ total }	</td>
+<td><a href="buyNow.lti">Buy Now	</td>
+   </tr>
+   
    </table>
    
 
@@ -43,16 +49,4 @@
 <br>
 
 
-
-
-
-
-<br>
-<br>
-<br>
-
-
-<!-- <footer>All Rights Reserved by  ©RS3</footer> -->
-</body>
-</html>
 

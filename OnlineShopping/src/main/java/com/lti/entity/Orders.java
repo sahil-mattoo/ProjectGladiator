@@ -27,8 +27,7 @@ public class Orders {
 	@Column(name="STATUS")
 	private String status;
 	
-	@Column(name="ITEM_QUANTITY")
-	private String itemQuantity;
+
 	
 	@ManyToOne
 	@JoinColumn(name="CUSTOMER_ID")
@@ -61,13 +60,7 @@ public class Orders {
 		this.status = status;
 	}
 
-	public String getItemQuantity() {
-		return itemQuantity;
-	}
 
-	public void setItemQuantity(String itemQuantity) {
-		this.itemQuantity = itemQuantity;
-	}
 
 	public Customer getCustomer() {
 		return customer;

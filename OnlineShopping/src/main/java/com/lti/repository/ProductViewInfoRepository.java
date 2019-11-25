@@ -12,16 +12,16 @@ import org.springframework.transaction.annotation.Transactional;
 import com.lti.entity.Product;
 
 @Repository
-public class DisplayProduct {
+public class ProductViewInfoRepository {
 	@PersistenceContext
 	private EntityManager entityManager;
 
 	@Transactional
-		public List<Product> productDisplayOnProductPage(){
-		Query q=entityManager.createQuery("select p from Product p");	
-		//q.setParameter("product", productName);
-		List<Product> p= q.getResultList();
-		System.out.println(p.size());
+		public Product productDisplayOnProductPage(int productId){
+		Query q=entityManager.createQuery("select p from Product p where p.productId=:pid");	
+		q.setParameter("pid", productId);
+		Product p=(Product) q.getSingleResult();
+		System.out.println(p);
 		return p;
 	}
 	

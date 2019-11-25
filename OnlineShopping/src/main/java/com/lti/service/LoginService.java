@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.lti.entity.Admin;
+import com.lti.entity.Customer;
+import com.lti.entity.Retailer;
 import com.lti.repository.LoginRepository;
 
 @Service("loginCheck")
@@ -14,46 +16,23 @@ public class LoginService{
 	@Autowired
 	private LoginRepository loginRepo;
 	
-	public boolean  adminLogin(String email, String password){
-		int a= loginRepo.adminCheck(email, password);
-
-		if(a==1)
-		{
-			return true;
-		}
-		
-		else {
-			return false;
-		}		
+	public Admin  adminLogin(String email, String password){
+		Admin a =  loginRepo.adminCheck(email, password);
+		return a;
 	}
 	
-	public boolean customerLogin(String email, String password){
-		int a= loginRepo.customerCheck(email, password);
-
-		if(a==1)
-		{
-			return true;
-		}
+	public Customer customerLogin(String email, String password){
 		
-		else {
-			return false;
-		}
-			
+		Customer c= loginRepo.customerCheck(email, password);
+			return c;
 	}
 	
-	public boolean retailerLogin(String email, String password){
-		int a= loginRepo.retailerCheck(email, password);
-
-		if(a==1)
-		{
-			return true;
-		}
-		
-		else {
-			return false;
+	public Retailer retailerLogin(String email, String password){
+		Retailer r= loginRepo.retailerCheck(email, password);
+		return r;
 		}
 			
 	}
 	
 	
-}
+
