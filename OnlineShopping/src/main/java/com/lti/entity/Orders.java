@@ -27,8 +27,11 @@ public class Orders {
 	@Column(name="STATUS")
 	private String status;
 	
+<<<<<<< HEAD
 
 	
+=======
+>>>>>>> branch 'master' of https://github.com/sahil-mattoo/ProjectGladiator.git
 	@ManyToOne
 	@JoinColumn(name="CUSTOMER_ID")
     private Customer customer;
@@ -60,8 +63,11 @@ public class Orders {
 		this.status = status;
 	}
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> branch 'master' of https://github.com/sahil-mattoo/ProjectGladiator.git
 	public Customer getCustomer() {
 		return customer;
 	}
@@ -77,6 +83,13 @@ public class Orders {
 	public void setOrderItems(List<OrderItems> orderItems) {
 		this.orderItems = orderItems;
 	}
+
+	@Override
+	public String toString() {
+		return "Orders [orderId=" + orderId + ", orderDate=" + orderDate + ", status=" + status + ", customer="
+				+ customer + ", orderItems=" + orderItems + "]";
+	}
+
 	
 
 }

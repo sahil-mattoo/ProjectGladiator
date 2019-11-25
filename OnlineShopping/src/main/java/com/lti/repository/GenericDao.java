@@ -32,6 +32,10 @@ public class GenericDao {
 	{
 		entityManager.remove(object);
 	}
+<<<<<<< HEAD
+=======
+	
+>>>>>>> branch 'master' of https://github.com/sahil-mattoo/ProjectGladiator.git
 	@Transactional
 	public Object fetchById(Class clazz, Object pk)
 	{
